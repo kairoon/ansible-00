@@ -8,3 +8,11 @@
   - name: i want to display my first task result
     debug:
       msg: "{{myresult}}"
+  - name: install git
+    apt:
+      name: git
+      state: present
+  - name: install apache2
+    apt:
+      name: apache2
+      state: present
