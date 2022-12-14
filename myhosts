@@ -16,6 +16,6 @@
 [myUbuntuservers]
   172.31.26.54
 
-[myWebservers:vars]
-  myubuntuvar= apache2
-  myredhatvar= httpd
+#[myWebservers:vars]
+# myubuntuvar= apache2
+# myredhatvar= httpd
