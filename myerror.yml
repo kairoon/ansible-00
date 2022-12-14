@@ -10,6 +10,7 @@
     apt:
       name: apache2
       stateee: present
+    ignore_errors: true
   - name: install wget
     apt:
       name: wget
