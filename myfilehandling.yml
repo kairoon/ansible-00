@@ -15,10 +15,16 @@
     template:
       src: index.j2
       dest: /var/www/html/index.html
+    notify: restartwebserver
   - name: Download file and force basic auth
     ansible.builtin.get_url:
       url: https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-22-04
       dest: /home/ubuntu/jenkins.war
       force_basic_auth: yes
+  handlers:
+  - name: restartwebserver
+    service:
+      name: apache2
+      state: restarted
     
 
